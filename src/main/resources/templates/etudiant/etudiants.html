@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Page Etudiant</title>
+<link rel="stylesheet" type="text/css" th:href="@{css/index.css}">
+</head>
+<body>
+	<h1>Etudiants</h1>
+	<table>
+		<tr>
+			<th>Id</th>
+			<th>Numero-Etudiant</th>
+			<th>Nom</th>
+			<th>Prenom</th>
+			<th>Date-Naissance</th>
+			<th>Sexe</th>
+
+		</tr>
+		<tr th:each="eT:${etudiants}">
+
+
+			<td th:text="${eT.id}"></td>
+			<td th:text="${eT.numeroEtudiant}"></td>
+			<td th:text="${eT.nom}"></td>
+			<td th:text="${eT.prenom}"></td>
+			<td th:text="${eT.dateNaissance}"></td>
+			<td th:text="${eT.sexe}"></td>
+			
+
+			<td><a th:href="@{etudiant(id=${eT.id})}" />Infos Etudiants</td>
+			<td><a th:href="@{modifierEtudiant(id=${eT.id})}" />modifier</td>
+				<td><a th:href="@{supEtudiant(id=${eT.id})}"/>supprimer</td>
+
+
+
+
+		</tr>
+	</table>
+	
+	<a th:href="@{ajouterEtudiant}"/>Ajouter Etudiant</a></br>
+	<a th:href="@{notes}"/>Les Notes</a>
+	
+	
+	
+
+</body>
+</html>

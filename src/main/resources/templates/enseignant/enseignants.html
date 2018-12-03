@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Page Enseignants</title>
+<link rel="stylesheet" type="text/css" th:href="@{css/index.css}">
+</head>
+<body>
+<h1>Enseignants</h1>
+
+	<table>
+	<tr>
+			<th>Id</th>
+			<th>Numero-Enseignant</th>
+			<th>Nom</th>
+			<th>Prenom</th>
+			<th>Date-Naissance</th>
+			<th>Sexe</th>
+			<th>Grade</th>
+			<th>Date-Embauche</th>
+		</tr>
+		<tr th:each="e:${enseignants}">
+
+
+			<td th:text="${e.id}"></td>
+			<td th:text="${e.numero}"></td>
+			<td th:text="${e.nom}"></td>
+			<td th:text="${e.prenom}"></td>
+			<td th:text="${e.dateNaissance}"></td>
+			<td th:text="${e.sexe}"></td>
+			<td th:text="${e.grade}"></td>
+			<td th:text="${e.dateEmbauche}"></td>
+			<td><a th:href="@{enseignant(id=${e.id})}"/>Infos Enseignant</td>
+			<td><a th:href="@{supEnseignant(id=${e.id})}"/>Suppr Enseignant </td>
+			
+			
+
+
+		</tr>
+	</table>
+			<a th:href="@{ajouterEnseignant}"/>Ajouter Enseignant</a></br>
+			<a th:href="@{etudiants}"/>Liste Etudiants</a></br>
+			<a th:href="@{matieres}"/>Liste Matieres</a></br>
+			<a th:href="@{notes}"/>Les Notes</a></br>
+			
+
+</body>
+</html>

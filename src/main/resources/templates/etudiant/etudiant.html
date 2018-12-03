@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Page Infos Etudiant</title>
+<link rel="stylesheet" type="text/css" th:href="@{css/index.css}">
+</head>
+<body>
+
+<h1>ID</h1>
+<h2 th:text="${etudiant.id}"></h2>
+<h1>Numero Etudiant</h1>
+<h2 th:text="${etudiant.numeroEtudiant}"></h2>
+<h1>Nom</h1>
+<h2 th:text="${etudiant.nom}"></h2>
+<h1>Prenom</h1>
+<h2 th:text="${etudiant.prenom}"></h2>
+<h1>Date Naissance</h1>
+<h2 th:text="${etudiant.dateNaissance}"></h2>
+<h1>Sexe</h1>
+<h2 th:text="${etudiant.sexe}"></h2>
+
+
+
+<a th:href="@{etudiants}"/>Liste Etudiants</a></br>
+
+
+
+</body>
+</html>

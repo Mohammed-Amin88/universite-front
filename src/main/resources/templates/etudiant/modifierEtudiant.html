@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Page modifier etudiant</title>
+<link rel="stylesheet" type="text/css" th:href="@{css/formulaire.css}">
+</head>
+<body>
+<div class="form-style-5">
+<form th:action="@{modifierEtudiant}" method="POST" th:object="${etudiant}">
+<legend> Page Modifier Etudiant</legend>
+
+		
+		 <input type="hidden" name="id" placeholder="id" th:field="*{id}"  id="id" /><br> 
+		 
+		 <label for="numeroEtudiant">Numero Etudiant</label>
+		 <input type="text"name="numeroEtudiant" placeholder="Numero Etudiant" th:field="*{numeroEtudiant}" id="numeroEtudiant" /><br>  
+		 
+		 <label for="Nom">Nom</label> 
+		 <input type="text" name="Nom"placeholder="Nom" th:field="*{nom}" id="Nom" /><br>
+		 
+		 <label for="Prenom">Prenom</label>
+		 <input type="text" name="Prenom" placeholder="Prenom" th:field="*{prenom}" id="Prenom" /><br>
+		 
+		  <label for="id">Date Naissance</label>
+		 <input type="text"name="dateNaissance" placeholder="Date-Naissance" th:field="*{dateNaissance}" id="dateNaissance" /><br>  
+		 
+		  <label for="id">Sexe</label>
+		 <input type="text"name="sexe" placeholder="sexe" th:field="*{sexe}" id="sexe" /><br>  
+		 
+		
+		
+		
+		
+
+		<input type="submit" value="valider">
+	</form>
+	</div>
+
+
+</body>
+</html>
